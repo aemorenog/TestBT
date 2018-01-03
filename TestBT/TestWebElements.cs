@@ -53,8 +53,33 @@ namespace TestBT
         [FindsBy(How = How.XPath, Using = "/html/body/div[1]/div/div[1]/div[1]/div/nav/ul/li[1]/div/div/div/div/a[2]")]
         public IWebElement linkValidarClave { get; set; }
 
+        [FindsBy(How = How.XPath, Using = "/html/body/div/div/div[1]/section/div/div[5]/nav/ul/li[1]")]
+        public IWebElement menuViajes { get; set; }
 
-        
+        [FindsBy(How = How.XPath, Using = "/html/body/div/div/div[1]/section/div/div[1]/div/h2/a")]
+        public IWebElement opcionMenuIrViajes { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "/html/body/div/div/div[1]/section/div/div[5]/nav/ul/li[2]")]
+        public IWebElement menuTienda { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "/html/body/div/div/div[1]/section/div/div[2]/div/h2/a")]
+        public IWebElement opcionMenuIrTienda { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "/html/body/div/div/div[1]/section/div/div[5]/nav/ul/li[3]")]
+        public IWebElement menuDescuento { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "/html/body/div/div/div[1]/section/div/div[3]/div/h2/a")]
+        public IWebElement opcionMenuIrDescuento { get; set; }
+
+        [FindsBy(How = How.LinkText, Using = "Ver todos los viajes")]
+        public IWebElement LinkMundoViajes { get; set; }
+
+        [FindsBy(How = How.LinkText, Using = "Ver toda la tienda")]
+        public IWebElement LinkMundoTienda { get; set; }
+
+        [FindsBy(How = How.LinkText, Using = "Ver todos los descuentos")]
+        public IWebElement LinkMundoDescuentos { get; set; }
+
         #region  Metodos
         /// <summary>
         ///  Completa los campos de login
@@ -160,6 +185,63 @@ namespace TestBT
             btnHazteCliente.Click();
 
             System.Threading.Thread.Sleep(2000);
+        }
+
+        public void IngresoMundoViajes()
+        {
+            menuViajes.Click();
+
+            System.Threading.Thread.Sleep(2000);
+
+            opcionMenuIrViajes.Click();
+
+            System.Threading.Thread.Sleep(5000);
+
+
+        }
+
+        public void IngresoMundoTienda()
+        {
+            menuTienda.Click();
+
+            System.Threading.Thread.Sleep(2000);
+
+            opcionMenuIrTienda.Click();
+
+            System.Threading.Thread.Sleep(5000);
+
+        }
+
+        public void IngresoMundoDescuento()
+        {
+            menuDescuento.Click();
+
+            System.Threading.Thread.Sleep(2000);
+
+            opcionMenuIrDescuento.Click();
+
+            System.Threading.Thread.Sleep(9000);
+        }
+
+        public void IngresoLinkMundoViajes()
+        {
+            System.Threading.Thread.Sleep(2000);
+
+            LinkMundoViajes.Click();
+        }
+
+        public void IngresoLinkTienda()
+        {
+            System.Threading.Thread.Sleep(2000);
+
+            LinkMundoTienda.Click();
+        }
+
+        public void IngresoLinkDescuento()
+        {
+            System.Threading.Thread.Sleep(2000);
+
+            LinkMundoDescuentos.Click();
         }
 
         #endregion
