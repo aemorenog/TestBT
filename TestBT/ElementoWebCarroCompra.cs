@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
+using OpenQA.Selenium.Support.UI;
 using Sikuli4Net.sikuli_REST;
 using Sikuli4Net.sikuli_UTIL;
 using System;
@@ -71,7 +72,7 @@ namespace TestBT
         [FindsBy(How = How.Id, Using = "comuna-despacho")]
         public IWebElement comboComunaDespacho { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "btn-continuar-p3")]
+        [FindsBy(How = How.Id, Using = "btn-continuar-p3")]
         public IWebElement btnConfirmar { get; set; }
 
         public void LoginUsuario(string username, string password)
@@ -147,8 +148,12 @@ namespace TestBT
         }
 
 
-        public void completarDirección(string lugar, string direccion)
+        public void completarDirección(string lugar, string direccion, string Region, string Comuna)
         {
+            SelectElement selectValueRegion = new SelectElement(comboRegionDespacho);
+
+            SelectElement selectValueComuna = new SelectElement(comboRegionDespacho);
+
             txtAliasDireccionCliente.SendKeys(lugar);
 
             System.Threading.Thread.Sleep(2000);
@@ -157,11 +162,11 @@ namespace TestBT
 
             System.Threading.Thread.Sleep(2000);
 
-            comboRegionDespacho.Selected.Equals("(XV) Región de Arica y Parinacota");
+            selectValueRegion.SelectByText("(XV) Región de Arica y Parinacota");
 
             System.Threading.Thread.Sleep(2000);
 
-            comboComunaDespacho.Selected.Equals("Arica");
+            selectValueRegion.SelectByText("Arica");
 
             System.Threading.Thread.Sleep(2000);
 

@@ -411,6 +411,10 @@ namespace TestBT
 
             string direccion = "Casa #213213 asdasd";
 
+            string region = "";
+
+            string comuna = "";
+
 
             launcher.Start();
 
@@ -428,7 +432,9 @@ namespace TestBT
 
             System.Threading.Thread.Sleep(3000);
 
-            js.ExecuteScript("window.scrollBy(0,900);", "");
+            js.ExecuteScript("window.scrollBy(0,600);", "");
+
+            System.Threading.Thread.Sleep(3000);
 
             paginaBT.completarDirección(lugar, direccion);
 
@@ -438,11 +444,7 @@ namespace TestBT
 
             PropiedadColeccionDriver.driver.Quit();
         }
-
-
     }
-
-  
 }
 
     
