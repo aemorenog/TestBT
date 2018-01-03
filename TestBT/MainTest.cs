@@ -407,6 +407,11 @@ namespace TestBT
 
             string producto = "abrazo";
 
+            string lugar = "Casa";
+
+            string direccion = "Casa #213213 asdasd";
+
+
             launcher.Start();
 
             paginaBT.LoginUsuario(userName, password);
@@ -417,13 +422,15 @@ namespace TestBT
 
             System.Threading.Thread.Sleep(3000);
 
-            //js.ExecuteScript("window.scrollBy(0,900);", "");
-
-            System.Threading.Thread.Sleep(3000);
-
             //js.ExecuteScript("window.scrollBy(0,-1000);", "");
 
             paginaBT.completarFormulario();
+
+            System.Threading.Thread.Sleep(3000);
+
+            js.ExecuteScript("window.scrollBy(0,900);", "");
+
+            paginaBT.completarDirección(lugar, direccion);
 
             //screen.Click(patter_buttoncath);
 
