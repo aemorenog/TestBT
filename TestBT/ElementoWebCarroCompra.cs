@@ -72,8 +72,8 @@ namespace TestBT
         [FindsBy(How = How.Id, Using = "comuna-despacho")]
         public IWebElement comboComunaDespacho { get; set; }
 
-        [FindsBy(How = How.Id, Using = "btn-continuar-p3")]
-        public IWebElement btnConfirmar { get; set; }
+        [FindsBy(How = How.Name, Using = "Continuar")]
+        public IWebElement btnContinuar { get; set; }
 
         public void LoginUsuario(string username, string password)
         {
@@ -152,7 +152,7 @@ namespace TestBT
         {
             SelectElement selectValueRegion = new SelectElement(comboRegionDespacho);
 
-            SelectElement selectValueComuna = new SelectElement(comboRegionDespacho);
+            SelectElement selectValueComuna = new SelectElement(comboComunaDespacho);
 
             txtAliasDireccionCliente.SendKeys(lugar);
 
@@ -166,11 +166,11 @@ namespace TestBT
 
             System.Threading.Thread.Sleep(2000);
 
-            selectValueRegion.SelectByText(Comuna);
+            selectValueComuna.SelectByText(Comuna);
 
             System.Threading.Thread.Sleep(2000);
 
-            btnConfirmar.Click();
+            btnContinuar.Click();
         }
 
         public void SetDropDownList()

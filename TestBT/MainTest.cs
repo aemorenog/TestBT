@@ -399,7 +399,7 @@ namespace TestBT
 
             Screen screen = new Screen();
 
-            Pattern patter_buttoncath = new Pattern("C:/screen/button.PNG");
+            Pattern patter_buttoncath = new Pattern("C:/Users/Administrator/Desktop/screen/button.PNG");
 
             string userName = "pruebaingesmart@gmail.com";
 
@@ -428,6 +428,16 @@ namespace TestBT
 
             //js.ExecuteScript("window.scrollBy(0,-1000);", "");
 
+            js.ExecuteScript("window.scrollBy(0,600);", "");
+
+            System.Threading.Thread.Sleep(3000);
+
+            screen.Click(patter_buttoncath,0);
+
+            System.Threading.Thread.Sleep(3000);
+
+            js.ExecuteScript("window.scrollBy(0,-600);", "");
+
             paginaBT.completarFormulario();
 
             System.Threading.Thread.Sleep(3000);
@@ -437,8 +447,6 @@ namespace TestBT
             System.Threading.Thread.Sleep(3000);
 
             paginaBT.completarDirección(lugar, direccion, region, comuna);
-
-            //screen.Click(patter_buttoncath);
 
             System.Threading.Thread.Sleep(3000);
 
