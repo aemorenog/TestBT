@@ -426,13 +426,11 @@ namespace TestBT
 
             System.Threading.Thread.Sleep(3000);
 
-            //js.ExecuteScript("window.scrollBy(0,-1000);", "");
-
-            js.ExecuteScript("window.scrollBy(0,600);", "");
+            js.ExecuteScript("window.scrollBy(0,1000);", "");
 
             System.Threading.Thread.Sleep(3000);
 
-            screen.Click(patter_buttoncath,0);
+            screen.Click(patter_buttoncath);
 
             System.Threading.Thread.Sleep(3000);
 
