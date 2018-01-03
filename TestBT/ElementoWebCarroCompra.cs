@@ -162,11 +162,11 @@ namespace TestBT
 
             System.Threading.Thread.Sleep(2000);
 
-            selectValueRegion.SelectByText("(XV) Región de Arica y Parinacota");
+            selectValueRegion.SelectByText(Region);
 
             System.Threading.Thread.Sleep(2000);
 
-            selectValueRegion.SelectByText("Arica");
+            selectValueRegion.SelectByText(Comuna);
 
             System.Threading.Thread.Sleep(2000);
 

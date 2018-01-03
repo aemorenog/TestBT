@@ -411,9 +411,9 @@ namespace TestBT
 
             string direccion = "Casa #213213 asdasd";
 
-            string region = "";
+            string region = "(XV) Región de Arica y Parinacota";
 
-            string comuna = "";
+            string comuna = "Arica";
 
 
             launcher.Start();
@@ -436,7 +436,7 @@ namespace TestBT
 
             System.Threading.Thread.Sleep(3000);
 
-            paginaBT.completarDirección(lugar, direccion);
+            paginaBT.completarDirección(lugar, direccion, region, comuna);
 
             //screen.Click(patter_buttoncath);
 
