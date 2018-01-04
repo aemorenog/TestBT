@@ -72,8 +72,11 @@ namespace TestBT
         [FindsBy(How = How.Id, Using = "comuna-despacho")]
         public IWebElement comboComunaDespacho { get; set; }
 
-        [FindsBy(How = How.Name, Using = "Continuar")]
+        [FindsBy(How = How.XPath, Using = "//*[@id="+"btn - continuar - p2"+"]")]
         public IWebElement btnContinuar { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "btns-despacho")]
+        public IWebElement btnDespacho { get; set; }
 
         public void LoginUsuario(string username, string password)
         {
@@ -171,6 +174,12 @@ namespace TestBT
             System.Threading.Thread.Sleep(2000);
 
             btnContinuar.Click();
+        }
+
+        public void verTablaDespacho()
+        {
+            btnDespacho.Click();
+
         }
 
         public void SetDropDownList()

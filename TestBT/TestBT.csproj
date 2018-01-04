@@ -87,6 +87,7 @@
     <Compile Include="ElementoWebHeader.cs" />
     <Compile Include="ElementoWebMundoTienda.cs" />
     <Compile Include="ElementoWebMundoViajes.cs" />
+    <Compile Include="ElementoWebTablaDespacho.cs" />
     <Compile Include="MainTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PropiedadColeccionDriver.cs" />
