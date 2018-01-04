@@ -21,7 +21,6 @@ namespace TestBT
         }
 
         [OneTimeSetUp]
-
         public void initialize()
         {
             //Usameos nuestra variable global webdriver y le asignamos que sea de tipo Chrome ()
