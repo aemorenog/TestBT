@@ -450,6 +450,12 @@ namespace TestBT
 
             PropiedadColeccionDriver.driver.Quit();
         }
+
+        [Test]
+        public void validarValores(string peso)
+        {
+
+        }
     }
 }
 
