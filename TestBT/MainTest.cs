@@ -452,8 +452,45 @@ namespace TestBT
         }
 
         [Test]
-        public void validarValores(string peso)
+        public void validarValores()
         {
+            ElementoWebCarroCompra paginaBT = new ElementoWebCarroCompra();
+
+            ElementoWebTablaDespacho paginaBTC = new ElementoWebTablaDespacho();
+
+            IJavaScriptExecutor js = PropiedadColeccionDriver.driver as IJavaScriptExecutor;
+
+            string userName = "pruebaingesmart@gmail.com";
+
+            string password = "c123456";
+
+            string producto = "abrazo";
+
+            string lugar = "Casa";
+
+            string direccion = "Casa #213213 asdasd";
+
+            string peso = "xxx";
+
+            string comuna = "xxx";
+
+            paginaBT.LoginUsuario(userName, password);
+
+            System.Threading.Thread.Sleep(3000);
+
+            paginaBT.IngresarCarroCompra(producto);
+
+            System.Threading.Thread.Sleep(3000);
+
+            js.ExecuteScript("window.scrollBy(0,1000);", "");
+
+            System.Threading.Thread.Sleep(3000);
+
+            paginaBTC.validarValoresComboPeso();
+
+            System.Threading.Thread.Sleep(3000);
+
+            PropiedadColeccionDriver.driver.Quit();
 
         }
     }
