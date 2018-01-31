@@ -492,6 +492,26 @@ namespace TestBT
             PropiedadColeccionDriver.driver.Quit();
 
         }
+
+        ///
+        /// Ingreso Información y AYuda
+        /// 
+        [Test]
+        public void validarIngresoInformacionAyuda()
+        {
+            TestWebElements paginaBT = new TestWebElements();
+
+            //IJavaScriptExecutor js = PropiedadColeccionDriver.driver as IJavaScriptExecutor;
+
+            paginaBT.IngresoMenuInformaciónyAyuda();
+
+            System.Threading.Thread.Sleep(3000);
+
+            PropiedadColeccionDriver.driver.Quit();
+        }
+        
+
+
     }
 }
 
